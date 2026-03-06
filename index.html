@@ -3,70 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- CONFIGURACIÓN PARA GOOGLE (SEO) -->
-    <title>Afinamex Refaccionarias | Refacciones en Atlacomulco y Toluca</title>
-    <meta name="description" content="Venta de refacciones automotrices en Atlacomulco y Toluca. Especialistas en afinaciones, frenos, suspensión y motor. ¡Las mejores marcas al mejor precio con AFINAMEX!">
-    <meta name="keywords" content="refaccionarias Atlacomulco, refacciones Toluca, afinaciones, frenos, suspensión, AFINAMEX, autopartes Estado de México">
-    <link rel="canonical" href="https://afinamex.com">
-
-    <!-- Para que se vea bien en WhatsApp/Facebook -->
-    <meta property="og:title" content="Afinamex Refaccionarias | Atlacomulco y Toluca">
-    <meta property="og:description" content="Todo para tu auto: afinación, frenos y motor. ¡Cotiza por WhatsApp!">
-    <meta property="og:image" content="https://afinamex.comlogo.jpg">
-    <meta property="og:url" content="https://afinamex.com">
-
+    <title>AFINAMEX | Taller Mecánico en Atlacomulco y Toluca</title>
+    <meta name="description" content="Taller mecánico AFINAMEX en Toluca y Atlacomulco. Especialistas en afinaciones, suspensión, frenos y administración de flotillas.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     <style>
-        .bg-rojo-afin { background-color: #e52421; }
-        .text-rojo-afin { color: #e52421; }
-        .bg-amarillo-afin { background-color: #ffed00; }
-        .border-rojo-afin { border-color: #e52421; }
-        .fuente-italica { font-style: italic; font-weight: 900; }
+        .bg-rojo { background-color: #cc0000; }
+        .bg-amarillo { background-color: #ffcc00; }
+        .text-rojo { color: #cc0000; }
+        .italic-black { font-style: italic; font-weight: 900; }
     </style>
 </head>
-<body class="bg-white font-sans">
+<body class="bg-gray-100 font-sans">
 
-    <!-- Header con tu LOGO -->
-    <header class="bg-white border-b-4 border-rojo-afin p-2 sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="flex items-center">
-                <img src="logo.jpg" alt="Afinamex Refaccionarias" class="h-14 md:h-20 object-contain">
+    <!-- Barra Superior de Contacto -->
+    <div class="bg-zinc-900 text-white py-2 text-xs md:text-sm px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex gap-4">
+                <span><i class="fas fa-phone mr-1"></i> (712) 140 2196</span>
+                <span class="hidden md:inline"><i class="fas fa-envelope mr-1"></i> contacto@afinamex.com</span>
             </div>
-            <nav>
-                <a href="https://wa.me" class="bg-amarillo-afin text-black px-4 py-2 border-2 border-rojo-afin rounded-full font-black text-xs md:text-sm uppercase fuente-italica shadow-sm">
-                    <i class="fab fa-whatsapp mr-1"></i>Cotizar Ahora
-                </a>
+            <div class="bg-amarillo text-black px-3 py-1 font-bold rounded flex items-center gap-1">
+                <i class="fas fa-calendar-alt"></i> Agendar servicio
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación -->
+    <header class="bg-black text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="logo.jpg" alt="Afinamex" class="h-10 md:h-12">
+            <nav class="hidden md:flex gap-6 text-xs font-bold uppercase">
+                <a href="#" class="hover:text-amarillo">Inicio</a>
+                <a href="#servicios" class="hover:text-amarillo">Servicios</a>
+                <a href="#ubicacion" class="hover:text-amarillo">Ubicación</a>
+                <a href="#" class="hover:text-amarillo">Nosotros</a>
             </nav>
         </div>
     </header>
 
-    <!-- Sección Principal -->
-    <section class="bg-amarillo-afin py-16 px-6 border-b-8 border-rojo-afin text-center">
-        <div class="container mx-auto">
-            <h1 class="text-4xl md:text-6xl text-rojo-afin fuente-italica uppercase mb-4 drop-shadow-sm">
-                Refaccionaria en Atlacomulco y Toluca
-            </h1>
-            <p class="text-xl md:text-2xl font-bold text-black mb-8 italic">Calidad y Confianza para tu Vehículo</p>
-            <a href="https://wa.me" class="bg-rojo-afin text-white text-xl font-black py-4 px-10 rounded-full shadow-2xl hover:scale-105 transition inline-block fuente-italica uppercase">
-                CONSULTAR EXISTENCIAS
-            </a>
+    <!-- Hero Section (Portada) -->
+    <section class="relative bg-zinc-800 text-white min-h-[500px] flex items-center px-6">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="https://images.unsplash.com" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 container mx-auto">
+            <h2 class="text-2xl md:text-4xl font-bold uppercase border-b-4 border-amarillo inline-block mb-2">Taller Mecánico</h2>
+            <h1 class="text-5xl md:text-7xl font-black text-rojo italic uppercase leading-none mb-6">AFINAMEX</h1>
+            <p class="text-xl md:text-2xl font-bold mb-6">Mantenimiento automotriz profesional</p>
+            <ul class="space-y-2 mb-8 font-bold">
+                <li><i class="fas fa-check text-rojo mr-2"></i> Afinaciones</li>
+                <li><i class="fas fa-check text-rojo mr-2"></i> Ajustes</li>
+                <li><i class="fas fa-check text-rojo mr-2"></i> Suspensión</li>
+            </ul>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://wa.me" class="bg-amarillo text-black font-black py-3 px-6 rounded flex items-center gap-2 uppercase italic text-sm">
+                    <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+                </a>
+                <a href="#" class="bg-rojo text-white font-black py-3 px-6 rounded flex items-center gap-2 uppercase italic text-sm">
+                    <i class="fas fa-calendar-plus"></i> Agendar servicio
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Sucursales -->
-    <section class="py-12 container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-gray-100 p-8 rounded-3xl border-l-8 border-rojo-afin shadow-lg">
-                <h3 class="text-2xl text-rojo-afin fuente-italica uppercase mb-2">Sucursal Atlacomulco</h3>
-                <p class="font-bold italic text-gray-700"><i class="fas fa-map-marker-alt text-rojo-afin mr-2"></i> Centro, Atlacomulco, Edo. Méx.</p>
-                <p class="mt-4 text-sm font-bold uppercase text-gray-500">Expertos en Afinaciones y Frenos</p>
+    <!-- Nuestros Servicios -->
+    <section id="servicios" class="py-16 container mx-auto px-6">
+        <h2 class="text-3xl font-black text-center text-zinc-800 uppercase mb-12 italic">Nuestros Servicios</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Servicio 1 -->
+            <div class="bg-white p-6 rounded-lg shadow flex gap-4 items-start border-t-4 border-amarillo">
+                <i class="fas fa-tools text-4xl text-amarillo"></i>
+                <div>
+                    <h3 class="font-black uppercase italic mb-1">Afinación automotriz</h3>
+                    <p class="text-xs text-gray-500 italic">Cambio de bujías, filtros y revisión general.</p>
+                </div>
             </div>
-            <div class="bg-gray-100 p-8 rounded-3xl border-l-8 border-rojo-afin shadow-lg">
-                <h3 class="text-2xl text-rojo-afin fuente-italica uppercase mb-2">Sucursal Toluca</h3>
-                <p class="font-bold italic text-gray-700"><i class="fas fa-map-marker-alt text-rojo-afin mr-2"></i> San Lorenzo Tepaltitlán, Toluca.</p>
-                <p class="mt-4 text-sm font-bold uppercase text-gray-500">Especialistas en Motor y Suspensión</p>
+            <!-- Servicio 2 -->
+            <div class="bg-white p-6 rounded-lg shadow flex gap-4 items-start border-t-4 border-amarillo">
+                <i class="fas fa-oil-can text-4xl text-amarillo"></i>
+                <div>
+                    <h3 class="font-black uppercase italic mb-1">Cambio de aceite</h3>
+                    <p class="text-xs text-gray-500 italic">Aceite sintético y semisintético.</p>
+                </div>
+            </div>
+            <!-- Servicio 3 -->
+            <div class="bg-white p-6 rounded-lg shadow flex gap-4 items-start border-t-4 border-amarillo">
+                <i class="fas fa-cog text-4xl text-amarillo"></i>
+                <div>
+                    <h3 class="font-black uppercase italic mb-1">Ajustes mecánicos</h3>
+                    <p class="text-xs text-gray-500 italic">Diagnóstico y reparación.</p>
+                </div>
+            </div>
+            <!-- Fila 2 de servicios -->
+            <div class="bg-white p-6 rounded-lg shadow flex gap-4 items-start border-t-4 border-amarillo">
+                <i class="fas fa-car-side text-4xl text-amarillo"></i>
+                <div>
+                    <h3 class="font-black uppercase italic mb-1">Suspensión</h3>
+                    <p class="text-xs text-gray-500 italic">Amortiguadores, rotulas, terminales.</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow flex gap-4 items-start border-t-4 border-amarillo">
+                <i class="fas fa-paint-roller text-4xl text-amarillo"></i>
+                <div>
+                    <h3 class="font-black uppercase italic mb-1">Hojalatería y pintura</h3>
+                    <p class="text-xs text-gray-500 italic">Enderezado y pintura de carrocería.</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow flex gap-4 items-start border-t-4 border-amarillo">
+                <i class="fas fa-compact-disc text-4xl text-amarillo"></i>
+                <div>
+                    <h3 class="font-black uppercase italic mb-1">Llantas</h3>
+                    <p class="text-xs text-gray-500 italic">Venta, instalación y balanceo de llantas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Administración de Flotillas -->
+    <section class="bg-amarillo py-16 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-black uppercase italic leading-tight mb-4">Administración de Flotillas</h2>
+                <p class="font-bold mb-4 italic">Mantenimiento de flotas empresariales</p>
+                <ul class="space-y-2 text-sm font-bold mb-6">
+                    <li><i class="fas fa-circle text-rojo text-[8px] mr-2"></i> Control, administración y mantenimiento preventivo.</li>
+                    <li><i class="fas fa-circle text-rojo text-[8px] mr-2"></i> Servicios personalizados a empresas y negocios.</li>
+                </ul>
+                <a href="#" class="bg-rojo text-white font-black py-2 px-6 rounded uppercase italic text-sm">» Más información</a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com" class="rounded shadow-xl border-4 border-white">
+            </div>
+        </div>
+    </section>
+
+    <!-- Marcas -->
+    <section class="bg-zinc-900 py-12 text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h3 class="text-center font-black uppercase italic mb-10 text-xl tracking-widest">Marcas que atendemos</h3>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+                <i class="fab fa-nissan text-5xl"></i>
+                <img src="https://upload.wikimedia.org" class="h-12 invert">
+                <i class="fab fa-honda text-5xl"></i>
+                <img src="https://upload.wikimedia.org" class="h-12">
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion" class="py-16 container mx-auto px-6">
+        <h2 class="text-3xl font-black text-rojo uppercase mb-8 border-b-4 border-rojo inline-block italic">Ubicación</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                    <i class="fas fa-map-marker-alt text-amarillo text-2xl mt-1"></i>
+                    <div>
+                        <h4 class="text-xl font-black italic">Afinamex Toluca</h4>
+                        <p class="text-gray-600 italic">Av. Isidro Fabela 1946, Calixtlahuaca, Estado de México.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-phone-alt text-amarillo text-2xl"></i>
+                    <p class="text-xl font-black">(712) 140 2196</p>
+                </div>
+                <a href="https://wa.me" class="bg-green-600 text-white font-black py-3 px-6 rounded-lg inline-flex items-center gap-2 uppercase italic shadow-lg">
+                    <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+            <div class="h-80 rounded-lg overflow-hidden border-2 border-gray-200 shadow-xl">
+                <iframe src="https://www.google.com" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -76,9 +182,9 @@
         <i class="fab fa-whatsapp text-4xl"></i>
     </a>
 
-    <footer class="bg-black text-white py-8 text-center border-t-4 border-amarillo-afin">
-        <p class="fuente-italica text-lg">AFINAMEX REFACCIONARIAS ®</p>
-        <p class="text-xs text-gray-500 mt-2">Orgullosamente sirviendo al Estado de México</p>
+    <footer class="bg-zinc-900 text-gray-400 py-10 text-center border-t-8 border-rojo">
+        <img src="logo.jpg" alt="Afinamex" class="h-10 mx-auto mb-4 grayscale brightness-200">
+        <p class="font-bold italic text-white">© 2026 AFINAMEX - Servicios Automotrices Especializados</p>
     </footer>
 
 </body>
