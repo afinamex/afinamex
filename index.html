@@ -1,66 +1,85 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Afinamex - Mantenimiento Automotriz</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CONFIGURACIÓN PARA GOOGLE (SEO) -->
+    <title>Afinamex Refaccionarias | Refacciones en Atlacomulco y Toluca</title>
+    <meta name="description" content="Venta de refacciones automotrices en Atlacomulco y Toluca. Especialistas en afinaciones, frenos, suspensión y motor. ¡Las mejores marcas al mejor precio con AFINAMEX!">
+    <meta name="keywords" content="refaccionarias Atlacomulco, refacciones Toluca, afinaciones, frenos, suspensión, AFINAMEX, autopartes Estado de México">
+    <link rel="canonical" href="https://afinamex.com">
+
+    <!-- Para que se vea bien en WhatsApp/Facebook -->
+    <meta property="og:title" content="Afinamex Refaccionarias | Atlacomulco y Toluca">
+    <meta property="og:description" content="Todo para tu auto: afinación, frenos y motor. ¡Cotiza por WhatsApp!">
+    <meta property="og:image" content="https://afinamex.comlogo.jpg">
+    <meta property="og:url" content="https://afinamex.com">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <style>
+        .bg-rojo-afin { background-color: #e52421; }
+        .text-rojo-afin { color: #e52421; }
+        .bg-amarillo-afin { background-color: #ffed00; }
+        .border-rojo-afin { border-color: #e52421; }
+        .fuente-italica { font-style: italic; font-weight: 900; }
+    </style>
 </head>
-<body>
+<body class="bg-white font-sans">
 
-<header>
-  <div class="logo">AFINAMEX</div>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#flotillas">Flotillas</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
+    <!-- Header con tu LOGO -->
+    <header class="bg-white border-b-4 border-rojo-afin p-2 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center">
+                <img src="logo.jpg" alt="Afinamex Refaccionarias" class="h-14 md:h-20 object-contain">
+            </div>
+            <nav>
+                <a href="https://wa.me" class="bg-amarillo-afin text-black px-4 py-2 border-2 border-rojo-afin rounded-full font-black text-xs md:text-sm uppercase fuente-italica shadow-sm">
+                    <i class="fab fa-whatsapp mr-1"></i>Cotizar Ahora
+                </a>
+            </nav>
+        </div>
+    </header>
 
-<section id="inicio" class="hero">
-  <h1>Mantenimiento Automotriz Profesional</h1>
-  <p>Afinaciones, diagnóstico y servicio completo para tu vehículo.</p>
-  <a class="btn" href="https://wa.me/527121402196" target="_blank">Cotizar por WhatsApp</a>
-</section>
+    <!-- Sección Principal -->
+    <section class="bg-amarillo-afin py-16 px-6 border-b-8 border-rojo-afin text-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-6xl text-rojo-afin fuente-italica uppercase mb-4 drop-shadow-sm">
+                Refaccionaria en Atlacomulco y Toluca
+            </h1>
+            <p class="text-xl md:text-2xl font-bold text-black mb-8 italic">Calidad y Confianza para tu Vehículo</p>
+            <a href="https://wa.me" class="bg-rojo-afin text-white text-xl font-black py-4 px-10 rounded-full shadow-2xl hover:scale-105 transition inline-block fuente-italica uppercase">
+                CONSULTAR EXISTENCIAS
+            </a>
+        </div>
+    </section>
 
-<section id="servicios" class="services">
-<h2>Servicios</h2>
-<div class="grid">
+    <!-- Sucursales -->
+    <section class="py-12 container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-100 p-8 rounded-3xl border-l-8 border-rojo-afin shadow-lg">
+                <h3 class="text-2xl text-rojo-afin fuente-italica uppercase mb-2">Sucursal Atlacomulco</h3>
+                <p class="font-bold italic text-gray-700"><i class="fas fa-map-marker-alt text-rojo-afin mr-2"></i> Centro, Atlacomulco, Edo. Méx.</p>
+                <p class="mt-4 text-sm font-bold uppercase text-gray-500">Expertos en Afinaciones y Frenos</p>
+            </div>
+            <div class="bg-gray-100 p-8 rounded-3xl border-l-8 border-rojo-afin shadow-lg">
+                <h3 class="text-2xl text-rojo-afin fuente-italica uppercase mb-2">Sucursal Toluca</h3>
+                <p class="font-bold italic text-gray-700"><i class="fas fa-map-marker-alt text-rojo-afin mr-2"></i> San Lorenzo Tepaltitlán, Toluca.</p>
+                <p class="mt-4 text-sm font-bold uppercase text-gray-500">Especialistas en Motor y Suspensión</p>
+            </div>
+        </div>
+    </section>
 
-<div class="card">Afinación Automotriz</div>
-<div class="card">Cambio de Aceite</div>
-<div class="card">Suspensión</div>
-<div class="card">Diagnóstico</div>
-<div class="card">Hojalatería y Pintura</div>
-<div class="card">Venta de Llantas</div>
-<div class="card">Grúas 24/7</div>
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl z-50 hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
 
-</div>
-</section>
-
-<section id="flotillas" class="fleet">
-<h2>Administración de Flotillas</h2>
-<p>Servicio especializado para empresas con múltiples vehículos.</p>
-
-<ul>
-<li>Mantenimiento preventivo</li>
-<li>Control de servicios por vehículo</li>
-<li>Diagnóstico constante</li>
-<li>Atención prioritaria para empresas</li>
-</ul>
-</section>
-
-<section id="contacto" class="contact">
-<h2>Contacto</h2>
-<p>WhatsApp: 712 140 2196</p>
-<a class="btn" href="https://wa.me/527121402196" target="_blank">Enviar mensaje</a>
-</section>
-
-<footer>
-<p>© Afinamex.com - Todos los derechos reservados</p>
-</footer>
+    <footer class="bg-black text-white py-8 text-center border-t-4 border-amarillo-afin">
+        <p class="fuente-italica text-lg">AFINAMEX REFACCIONARIAS ®</p>
+        <p class="text-xs text-gray-500 mt-2">Orgullosamente sirviendo al Estado de México</p>
+    </footer>
 
 </body>
 </html>
