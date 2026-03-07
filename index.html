@@ -11,7 +11,9 @@
 
 <meta name="description" content="Afinamex taller mecánico en Toluca especializado en afinaciones, suspensión, cambios de aceite y mantenimiento automotriz.">
 
-<meta name="keywords" content="taller mecanico toluca, afinaciones toluca, mecanico toluca">
+<meta name="keywords" content="taller mecanico toluca, afinaciones toluca, mecanico toluca, suspension autos">
+
+<meta name="author" content="Afinamex">
 
 <meta property="og:title" content="AFINAMEX Taller Mecánico">
 <meta property="og:description" content="Mantenimiento automotriz profesional en Toluca">
@@ -35,7 +37,7 @@ scroll-behavior:smooth;
 .reveal{
 opacity:0;
 transform:translateY(40px);
-transition:all .8s;
+transition:all 0.8s ease;
 }
 
 .reveal.active{
@@ -43,7 +45,7 @@ opacity:1;
 transform:translateY(0);
 }
 
-.whatsapp{
+.whatsapp-float{
 animation:pulse 2s infinite;
 }
 
@@ -78,7 +80,6 @@ animation:pulse 2s infinite;
 <a href="#">Inicio</a>
 <a href="#servicios">Servicios</a>
 <a href="#galeria">Galería</a>
-<a href="#marcas">Marcas</a>
 <a href="#ubicacion">Ubicación</a>
 
 <a href="mailto:contacto@afinamex.com?subject=Agendar%20servicio"
@@ -102,7 +103,7 @@ Agendar servicio
 TALLER MECÁNICO AFINAMEX
 </h1>
 
-<p class="text-xl mb-6">
+<p class="text-xl mb-4">
 Mantenimiento automotriz profesional en Toluca
 </p>
 
@@ -110,7 +111,6 @@ Mantenimiento automotriz profesional en Toluca
 <li>✔ Afinaciones</li>
 <li>✔ Ajustes</li>
 <li>✔ Suspensión</li>
-<li>✔ Diagnóstico automotriz</li>
 </ul>
 
 <div class="flex gap-4">
@@ -123,7 +123,7 @@ Cotizar por WhatsApp
 
 </a>
 
-<a href="mailto:contacto@afinamex.com"
+<a href="mailto:contacto@afinamex.com?subject=Agendar%20servicio%20automotriz"
 class="bg-red-600 px-6 py-3 rounded font-bold">
 
 Agendar servicio
@@ -157,13 +157,13 @@ NUESTROS <span class="text-red-600">SERVICIOS</span>
 </div>
 
 <div class="bg-white p-8 rounded-xl shadow">
-<h3 class="font-bold text-lg mb-2">Suspensión</h3>
-<p class="text-gray-600">Amortiguadores y terminales.</p>
+<h3 class="font-bold text-lg mb-2">Ajustes mecánicos</h3>
+<p class="text-gray-600">Diagnóstico y reparación.</p>
 </div>
 
 <div class="bg-white p-8 rounded-xl shadow">
-<h3 class="font-bold text-lg mb-2">Ajustes mecánicos</h3>
-<p class="text-gray-600">Diagnóstico y reparación.</p>
+<h3 class="font-bold text-lg mb-2">Suspensión</h3>
+<p class="text-gray-600">Amortiguadores y terminales.</p>
 </div>
 
 <div class="bg-white p-8 rounded-xl shadow">
@@ -180,7 +180,7 @@ NUESTROS <span class="text-red-600">SERVICIOS</span>
 
 </section>
 
-<!-- GALERIA -->
+<!-- GALERIA PRO -->
 
 <section id="galeria" class="py-20 bg-gray-200 px-10 reveal">
 
@@ -196,6 +196,7 @@ GALERÍA DEL TALLER
 <img src="galeria2.jpg" class="w-full flex-shrink-0">
 <img src="galeria3.jpg" class="w-full flex-shrink-0">
 <img src="galeria4.jpg" class="w-full flex-shrink-0">
+<img src="galeria5.jpg" class="w-full flex-shrink-0">
 
 </div>
 
@@ -216,50 +217,6 @@ class="absolute top-1/2 right-3 -translate-y-1/2 bg-black/60 text-white p-3 roun
 <div id="dots" class="flex justify-center gap-2 absolute bottom-4 left-0 right-0"></div>
 
 </div>
-
-</section>
-
-<!-- MARCAS -->
-
-<section id="marcas" class="py-20 px-10 bg-white reveal">
-
-<h2 class="text-center text-3xl font-bold mb-12">
-MARCAS QUE ATENDEMOS
-</h2>
-
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-xl font-bold text-gray-700">
-
-<div>Nissan</div>
-<div>Chevrolet</div>
-<div>Volkswagen</div>
-<div>Toyota</div>
-<div>Ford</div>
-<div>Honda</div>
-<div>Mazda</div>
-<div>Kia</div>
-
-</div>
-
-</section>
-
-<!-- AGENDAR -->
-
-<section class="bg-yellow-400 py-20 text-center reveal">
-
-<h2 class="text-4xl font-black mb-6">
-AGENDA TU SERVICIO HOY
-</h2>
-
-<p class="mb-8 text-lg">
-Contáctanos por WhatsApp o teléfono para cotizar tu servicio automotriz.
-</p>
-
-<a href="https://wa.me/527121402196"
-class="bg-black text-white px-8 py-4 rounded text-lg font-bold">
-
-Agendar por WhatsApp
-
-</a>
 
 </section>
 
@@ -329,7 +286,7 @@ Tel: (712) 140 2196
 <!-- BOTON WHATSAPP -->
 
 <a href="https://wa.me/527121402196"
-class="whatsapp fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg text-xl">
+class="whatsapp-float fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg text-xl">
 
 <i class="fa-brands fa-whatsapp"></i>
 
@@ -351,27 +308,29 @@ nav.classList.remove("bg-black");
 
 const reveals=document.querySelectorAll(".reveal");
 
-function reveal(){
+function revealOnScroll(){
 
-reveals.forEach(el=>{
-let top=el.getBoundingClientRect().top;
+for(let i=0;i<reveals.length;i++){
 
-if(top<window.innerHeight-100){
-el.classList.add("active");
+let windowHeight=window.innerHeight;
+let top=reveals[i].getBoundingClientRect().top;
+
+if(top<windowHeight-100){
+reveals[i].classList.add("active");
 }
 
-});
+}
 
 }
 
-window.addEventListener("scroll",reveal);
+window.addEventListener("scroll",revealOnScroll);
 
 const slides=document.getElementById("slides");
 const totalSlides=slides.children.length;
 
 let index=0;
 
-function update(){
+function updateSlider(){
 
 slides.style.transform=`translateX(-${index*100}%)`;
 
@@ -384,15 +343,15 @@ dot.classList.toggle("bg-gray-400",i!==index);
 
 document.getElementById("next").onclick=()=>{
 index=(index+1)%totalSlides;
-update();
+updateSlider();
 }
 
 document.getElementById("prev").onclick=()=>{
 index=(index-1+totalSlides)%totalSlides;
-update();
+updateSlider();
 }
 
-const dots=document.getElementById("dots");
+const dotsContainer=document.getElementById("dots");
 
 for(let i=0;i<totalSlides;i++){
 
@@ -402,18 +361,18 @@ dot.className="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer";
 
 dot.onclick=()=>{
 index=i;
-update();
+updateSlider();
 }
 
-dots.appendChild(dot);
+dotsContainer.appendChild(dot);
 
 }
 
-update();
+updateSlider();
 
 setInterval(()=>{
 index=(index+1)%totalSlides;
-update();
+updateSlider();
 },4000);
 
 </script>
