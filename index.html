@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -33,12 +34,25 @@ html{
 scroll-behavior:smooth;
 }
 
-.galeria img{
-transition:0.3s;
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
 }
 
-.galeria img:hover{
-transform:scale(1.05);
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+.whatsapp-float{
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.1)}
+100%{transform:scale(1)}
 }
 
 </style>
@@ -49,7 +63,7 @@ transform:scale(1.05);
 
 <!-- HEADER -->
 
-<header class="absolute w-full z-50 text-white">
+<header id="navbar" class="fixed w-full z-50 text-white transition-all">
 
 <div class="flex justify-end text-xs px-10 py-2 bg-black/70">
 
@@ -57,7 +71,7 @@ transform:scale(1.05);
 
 </div>
 
-<nav class="flex items-center px-10 py-4 bg-black/60 backdrop-blur">
+<nav class="flex items-center px-10 py-4 bg-black/40 backdrop-blur">
 
 <img src="logo.jpg" class="h-10">
 
@@ -83,7 +97,7 @@ Agendar servicio
 
 <section class="hero h-[650px] flex items-center">
 
-<div class="bg-black/60 text-white p-10 ml-10 rounded max-w-xl">
+<div class="bg-black/60 text-white p-10 ml-10 rounded max-w-xl reveal">
 
 <h1 class="text-5xl font-black text-red-500 mb-4">
 TALLER MECÁNICO AFINAMEX
@@ -124,7 +138,7 @@ Agendar servicio
 
 <!-- SERVICIOS -->
 
-<section id="servicios" class="py-20 px-10">
+<section id="servicios" class="py-20 px-10 reveal">
 
 <h2 class="text-center text-3xl font-bold mb-12">
 NUESTROS <span class="text-red-600">SERVICIOS</span>
@@ -166,62 +180,49 @@ NUESTROS <span class="text-red-600">SERVICIOS</span>
 
 </section>
 
-<!-- GALERIA -->
+<!-- GALERIA PRO -->
 
-<section id="galeria" class="py-20 bg-gray-200 px-10">
+<section id="galeria" class="py-20 bg-gray-200 px-10 reveal">
 
 <h2 class="text-center text-3xl font-bold mb-10">
 GALERÍA DEL TALLER
 </h2>
 
-<div class="grid md:grid-cols-3 gap-6 galeria">
+<div class="relative max-w-3xl mx-auto overflow-hidden rounded-lg shadow-lg">
 
-<img src="galeria1.jpg" alt="taller mecanico toluca" class="rounded shadow">
-<img src="galeria2.jpg" alt="afinacion automotriz" class="rounded shadow">
-<img src="galeria3.jpg" alt="mecanicos trabajando" class="rounded shadow">
+<div id="slides" class="flex transition-transform duration-500">
 
-<img src="galeria4.jpg" alt="cambio de aceite" class="rounded shadow">
-<img src="galeria5.jpg" alt="suspension automotriz" class="rounded shadow">
-<img src="galeria6.jpg" alt="reparacion mecanica" class="rounded shadow">
-
-<img src="galeria7.jpg" alt="servicio mecanico toluca" class="rounded shadow">
-<img src="galeria8.jpg" alt="taller afinamex" class="rounded shadow">
-<img src="galeria9.jpg" alt="mantenimiento automotriz" class="rounded shadow">
+<img src="galeria1.jpg" class="w-full flex-shrink-0">
+<img src="galeria2.jpg" class="w-full flex-shrink-0">
+<img src="galeria3.jpg" class="w-full flex-shrink-0">
+<img src="galeria4.jpg" class="w-full flex-shrink-0">
+<img src="galeria5.jpg" class="w-full flex-shrink-0">
 
 </div>
 
-</section>
+<button id="prev"
+class="absolute top-1/2 left-3 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full">
 
-<!-- FLOTILLAS -->
+<i class="fa-solid fa-chevron-left"></i>
 
-<section class="bg-yellow-400 py-20 px-10 flex flex-col md:flex-row items-center gap-10">
+</button>
 
-<div class="md:w-1/2">
+<button id="next"
+class="absolute top-1/2 right-3 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full">
 
-<h2 class="text-4xl font-black mb-6">
-ADMINISTRACIÓN DE FLOTILLAS
-</h2>
+<i class="fa-solid fa-chevron-right"></i>
 
-<p class="mb-6">
-Mantenimiento y control de flotas empresariales.
-</p>
+</button>
 
-<a href="tel:+527121402196"
-class="bg-red-600 text-white px-6 py-3 rounded inline-block">
-
-Más información
-
-</a>
+<div id="dots" class="flex justify-center gap-2 absolute bottom-4 left-0 right-0"></div>
 
 </div>
-
-<img src="flotillas.jpg" class="md:w-1/2 rounded shadow">
 
 </section>
 
 <!-- UBICACION -->
 
-<section id="ubicacion" class="py-20 px-10">
+<section id="ubicacion" class="py-20 px-10 reveal">
 
 <h2 class="text-center text-3xl font-bold text-red-600 mb-10">
 UBICACIÓN
@@ -285,13 +286,96 @@ Tel: (712) 140 2196
 <!-- BOTON WHATSAPP -->
 
 <a href="https://wa.me/527121402196"
-class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg text-xl">
+class="whatsapp-float fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg text-xl">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 </a>
 
-<!-- SEO LOCAL -->
+<script>
+
+window.addEventListener("scroll",function(){
+
+let nav=document.getElementById("navbar");
+
+if(window.scrollY>50){
+nav.classList.add("bg-black");
+}else{
+nav.classList.remove("bg-black");
+}
+
+});
+
+const reveals=document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight=window.innerHeight;
+let top=reveals[i].getBoundingClientRect().top;
+
+if(top<windowHeight-100){
+reveals[i].classList.add("active");
+}
+
+}
+
+}
+
+window.addEventListener("scroll",revealOnScroll);
+
+const slides=document.getElementById("slides");
+const totalSlides=slides.children.length;
+
+let index=0;
+
+function updateSlider(){
+
+slides.style.transform=`translateX(-${index*100}%)`;
+
+document.querySelectorAll(".dot").forEach((dot,i)=>{
+dot.classList.toggle("bg-white",i===index);
+dot.classList.toggle("bg-gray-400",i!==index);
+});
+
+}
+
+document.getElementById("next").onclick=()=>{
+index=(index+1)%totalSlides;
+updateSlider();
+}
+
+document.getElementById("prev").onclick=()=>{
+index=(index-1+totalSlides)%totalSlides;
+updateSlider();
+}
+
+const dotsContainer=document.getElementById("dots");
+
+for(let i=0;i<totalSlides;i++){
+
+let dot=document.createElement("div");
+
+dot.className="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer";
+
+dot.onclick=()=>{
+index=i;
+updateSlider();
+}
+
+dotsContainer.appendChild(dot);
+
+}
+
+updateSlider();
+
+setInterval(()=>{
+index=(index+1)%totalSlides;
+updateSlider();
+},4000);
+
+</script>
 
 <script type="application/ld+json">
 
@@ -313,3 +397,4 @@ class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg
 
 </body>
 </html>
+```
