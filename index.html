@@ -18,22 +18,9 @@
 <meta name="geo.region" content="MX-MEX">
 <meta name="geo.placename" content="Toluca">
 
-<meta name="geo.position" content="19.292;-99.655">
-<meta name="ICBM" content="19.292, -99.655">
-
 <meta property="og:title" content="AFINAMEX Taller Mecánico">
 <meta property="og:description" content="Mantenimiento automotriz profesional en Toluca">
 <meta property="og:image" content="logo.jpg">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://afinamex.com">
-<meta property="og:site_name" content="Afinamex">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Afinamex Taller Mecánico en Toluca">
-<meta name="twitter:description" content="Afinaciones, suspensión, cambio de aceite y mantenimiento automotriz en Toluca.">
-<meta name="twitter:image" content="logo.jpg">
-
-<link rel="preload" as="image" href="taller.jpg">
 
 <link rel="icon" href="logo.jpg">
 
@@ -67,15 +54,6 @@ transform:translateY(0);
 animation:pulse 2s infinite;
 }
 
-.servicio-card{
-transition:all .3s;
-}
-
-.servicio-card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(0,0,0,0.2);
-}
-
 @keyframes pulse{
 0%{transform:scale(1)}
 50%{transform:scale(1.1)}
@@ -88,6 +66,8 @@ box-shadow:0 15px 30px rgba(0,0,0,0.2);
 
 <body class="font-sans bg-gray-100">
 
+<!-- HEADER -->
+
 <header id="navbar" class="fixed w-full z-50 text-white transition-all">
 
 <div class="flex justify-end text-xs px-10 py-2 bg-black/70">
@@ -98,7 +78,7 @@ box-shadow:0 15px 30px rgba(0,0,0,0.2);
 
 <nav class="flex items-center px-10 py-4 bg-black/40 backdrop-blur">
 
-<img src="logo.jpg" class="h-10" loading="lazy" alt="Logo Afinamex">
+<img src="logo.jpg" class="h-10" loading="lazy">
 
 <button id="menuBtn" class="ml-auto md:hidden text-2xl">
 <i class="fa-solid fa-bars"></i>
@@ -122,6 +102,8 @@ Agendar servicio
 </nav>
 
 </header>
+
+<!-- HERO -->
 
 <section class="hero h-[650px] flex items-center">
 
@@ -164,6 +146,8 @@ Agendar servicio
 
 </section>
 
+<!-- SERVICIOS -->
+
 <section id="servicios" class="py-20 px-10 reveal">
 
 <h2 class="text-center text-3xl font-bold mb-12">
@@ -172,32 +156,32 @@ NUESTROS <span class="text-red-600">SERVICIOS</span>
 
 <div class="grid md:grid-cols-3 gap-8">
 
-<div class="bg-white p-8 rounded-xl shadow servicio-card">
+<div class="bg-white p-8 rounded-xl shadow">
 <h3 class="font-bold text-lg mb-2">Afinación automotriz</h3>
 <p class="text-gray-600">Cambio de bujías, filtros y revisión general.</p>
 </div>
 
-<div class="bg-white p-8 rounded-xl shadow servicio-card">
+<div class="bg-white p-8 rounded-xl shadow">
 <h3 class="font-bold text-lg mb-2">Cambio de aceite</h3>
 <p class="text-gray-600">Aceite sintético y semisintético.</p>
 </div>
 
-<div class="bg-white p-8 rounded-xl shadow servicio-card">
+<div class="bg-white p-8 rounded-xl shadow">
 <h3 class="font-bold text-lg mb-2">Ajustes mecánicos</h3>
 <p class="text-gray-600">Diagnóstico y reparación.</p>
 </div>
 
-<div class="bg-white p-8 rounded-xl shadow servicio-card">
+<div class="bg-white p-8 rounded-xl shadow">
 <h3 class="font-bold text-lg mb-2">Suspensión</h3>
 <p class="text-gray-600">Amortiguadores y terminales.</p>
 </div>
 
-<div class="bg-white p-8 rounded-xl shadow servicio-card">
+<div class="bg-white p-8 rounded-xl shadow">
 <h3 class="font-bold text-lg mb-2">Hojalatería y pintura</h3>
 <p class="text-gray-600">Enderezado y pintura.</p>
 </div>
 
-<div class="bg-white p-8 rounded-xl shadow servicio-card">
+<div class="bg-white p-8 rounded-xl shadow">
 <h3 class="font-bold text-lg mb-2">Llantas</h3>
 <p class="text-gray-600">Venta e instalación.</p>
 </div>
@@ -206,7 +190,7 @@ NUESTROS <span class="text-red-600">SERVICIOS</span>
 
 </section>
 
-<!-- GALERIA -->
+<!-- GALERIA SLIDER -->
 
 <section id="galeria" class="py-20 bg-gray-200 px-10 reveal">
 
@@ -218,12 +202,12 @@ GALERÍA DEL TALLER
 
 <div id="slides" class="flex transition-transform duration-500">
 
-<img src="galeria1.jpg" loading="lazy" alt="Taller mecanico Toluca" class="w-full flex-shrink-0 object-cover">
-<img src="galeria2.jpg" loading="lazy" alt="Afinacion automotriz" class="w-full flex-shrink-0 object-cover">
-<img src="galeria3.jpg" loading="lazy" alt="Servicio mecanico" class="w-full flex-shrink-0 object-cover">
-<img src="galeria4.jpg" loading="lazy" alt="Reparacion autos" class="w-full flex-shrink-0 object-cover">
-<img src="galeria5.jpg" loading="lazy" alt="Cambio aceite" class="w-full flex-shrink-0 object-cover">
-<img src="galeria6.jpg" loading="lazy" alt="Suspension automotriz" class="w-full flex-shrink-0 object-cover">
+<img src="galeria1.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
+<img src="galeria2.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
+<img src="galeria3.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
+<img src="galeria4.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
+<img src="galeria5.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
+<img src="galeria6.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
 
 </div>
 
@@ -245,34 +229,34 @@ class="absolute top-1/2 right-3 -translate-y-1/2 bg-black/60 text-white p-3 roun
 
 </section>
 
-<!-- ESTADISTICAS NUEVAS -->
+<!-- FLOTILLAS -->
 
-<section class="py-20 bg-black text-white text-center">
+<section class="bg-yellow-400 py-20 px-10 flex flex-col md:flex-row items-center gap-10 reveal">
 
-<h2 class="text-3xl font-bold mb-10">
-¿Por qué elegir Afinamex?
+<div class="md:w-1/2">
+
+<h2 class="text-4xl font-black mb-6">
+ADMINISTRACIÓN DE FLOTILLAS
 </h2>
 
-<div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+<p class="mb-6">
+Mantenimiento y control de flotas empresariales.
+</p>
 
-<div>
-<h3 class="text-5xl font-bold text-yellow-400 counter">15</h3>
-<p>Años de experiencia</p>
-</div>
+<a href="tel:+527121402196"
+class="bg-red-600 text-white px-6 py-3 rounded inline-block">
 
-<div>
-<h3 class="text-5xl font-bold text-yellow-400 counter">2500</h3>
-<p>Autos reparados</p>
-</div>
+Más información
 
-<div>
-<h3 class="text-5xl font-bold text-yellow-400 counter">100</h3>
-<p>Clientes satisfechos %</p>
-</div>
+</a>
 
 </div>
+
+<img src="flotillas.jpg" loading="lazy" class="md:w-1/2 rounded shadow">
 
 </section>
+
+<!-- UBICACION -->
 
 <section id="ubicacion" class="py-20 px-10 reveal">
 
@@ -316,6 +300,8 @@ class="w-full h-72 rounded shadow">
 
 </section>
 
+<!-- FOOTER -->
+
 <footer class="bg-black text-white py-10 text-center">
 
 <img src="logo.jpg" loading="lazy" class="h-12 mx-auto mb-4">
@@ -334,17 +320,12 @@ Tel: (712) 140 2196
 
 </footer>
 
+<!-- BOTON WHATSAPP -->
+
 <a href="https://wa.me/527121402196?text=Hola%20quiero%20cotizar%20un%20servicio"
 class="whatsapp fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg text-xl">
 
 <i class="fa-brands fa-whatsapp"></i>
-
-</a>
-
-<a href="tel:+527121402196"
-class="fixed bottom-24 right-6 bg-red-600 text-white p-4 rounded-full shadow-lg text-xl">
-
-<i class="fa-solid fa-phone"></i>
 
 </a>
 
@@ -408,7 +389,23 @@ index=(index+1)%totalSlides;
 updateSlider();
 },4000);
 
-document.addEventListener("contextmenu",event=>event.preventDefault());
+</script>
+
+<script type="application/ld+json">
+
+{
+"@context":"https://schema.org",
+"@type":"AutoRepair",
+"name":"Afinamex Taller Mecánico",
+"telephone":"+52 7121402196",
+"address":{
+"@type":"PostalAddress",
+"streetAddress":"Av. Isidro Fabela 1946",
+"addressLocality":"Toluca",
+"addressRegion":"Estado de México",
+"addressCountry":"MX"
+}
+}
 
 </script>
 
