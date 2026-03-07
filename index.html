@@ -66,6 +66,8 @@ animation:pulse 2s infinite;
 
 <body class="font-sans bg-gray-100">
 
+<!-- HEADER -->
+
 <header id="navbar" class="fixed w-full z-50 text-white transition-all">
 
 <div class="flex justify-end text-xs px-10 py-2 bg-black/70">
@@ -76,7 +78,7 @@ animation:pulse 2s infinite;
 
 <nav class="flex items-center px-10 py-4 bg-black/40 backdrop-blur">
 
-<img src="logo.jpg" class="h-10 bg-white px-3 py-1 rounded" loading="lazy">
+<img src="logo.jpg" class="h-10" loading="lazy">
 
 <button id="menuBtn" class="ml-auto md:hidden text-2xl">
 <i class="fa-solid fa-bars"></i>
@@ -100,6 +102,8 @@ Agendar servicio
 </nav>
 
 </header>
+
+<!-- HERO -->
 
 <section class="hero h-[650px] flex items-center">
 
@@ -141,6 +145,8 @@ Agendar servicio
 </div>
 
 </section>
+
+<!-- SERVICIOS -->
 
 <section id="servicios" class="py-20 px-10 reveal">
 
@@ -184,6 +190,8 @@ NUESTROS <span class="text-red-600">SERVICIOS</span>
 
 </section>
 
+<!-- GALERIA SLIDER -->
+
 <section id="galeria" class="py-20 bg-gray-200 px-10 reveal">
 
 <h2 class="text-center text-3xl font-bold mb-10">
@@ -200,9 +208,6 @@ GALERÍA DEL TALLER
 <img src="galeria4.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
 <img src="galeria5.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
 <img src="galeria6.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
-<img src="galeria7.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
-<img src="galeria8.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
-<img src="galeria9.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
 
 </div>
 
@@ -224,7 +229,185 @@ class="absolute top-1/2 right-3 -translate-y-1/2 bg-black/60 text-white p-3 roun
 
 </section>
 
-<!-- RESTO DEL CODIGO SIGUE EXACTAMENTE IGUAL (no se modificó nada más) -->
+<!-- FLOTILLAS -->
+
+<section class="bg-yellow-400 py-20 px-10 flex flex-col md:flex-row items-center gap-10 reveal">
+
+<div class="md:w-1/2">
+
+<h2 class="text-4xl font-black mb-6">
+ADMINISTRACIÓN DE FLOTILLAS
+</h2>
+
+<p class="mb-6">
+Mantenimiento y control de flotas empresariales.
+</p>
+
+<a href="tel:+527121402196"
+class="bg-red-600 text-white px-6 py-3 rounded inline-block">
+
+Más información
+
+</a>
+
+</div>
+
+<img src="flotillas.jpg" loading="lazy" class="md:w-1/2 rounded shadow">
+
+</section>
+
+<!-- UBICACION -->
+
+<section id="ubicacion" class="py-20 px-10 reveal">
+
+<h2 class="text-center text-3xl font-bold text-red-600 mb-10">
+UBICACIÓN
+</h2>
+
+<div class="grid md:grid-cols-2 gap-10">
+
+<div class="bg-white p-8 rounded shadow">
+
+<h3 class="font-bold text-xl mb-2">
+Afinamex Toluca
+</h3>
+
+<p class="text-gray-600 mb-4">
+Av. Isidro Fabela 1946<br>
+Calixtlahuaca, Estado de México
+</p>
+
+<p class="font-bold mb-6">
+(712) 140 2196
+</p>
+
+<a href="https://wa.me/527121402196?text=Hola%20quiero%20información"
+class="bg-green-500 text-white px-6 py-2 rounded">
+
+WhatsApp
+
+</a>
+
+</div>
+
+<iframe
+loading="lazy"
+src="https://maps.google.com/maps?q=Av%20Isidro%20Fabela%201946%20Toluca&t=&z=13&ie=UTF8&iwloc=&output=embed"
+class="w-full h-72 rounded shadow">
+</iframe>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="bg-black text-white py-10 text-center">
+
+<img src="logo.jpg" loading="lazy" class="h-12 mx-auto mb-4">
+
+<p>
+AFINAMEX Taller Mecánico
+</p>
+
+<p class="text-sm text-gray-400">
+Av. Isidro Fabela 1946, Toluca
+</p>
+
+<p class="text-sm">
+Tel: (712) 140 2196
+</p>
+
+</footer>
+
+<!-- BOTON WHATSAPP -->
+
+<a href="https://wa.me/527121402196?text=Hola%20quiero%20cotizar%20un%20servicio"
+class="whatsapp fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg text-xl">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<script>
+
+document.getElementById("menuBtn").onclick=function(){
+document.getElementById("menu").classList.toggle("hidden");
+}
+
+window.addEventListener("scroll",function(){
+
+let nav=document.getElementById("navbar");
+
+if(window.scrollY>50){
+nav.classList.add("bg-black");
+}else{
+nav.classList.remove("bg-black");
+}
+
+});
+
+const reveals=document.querySelectorAll(".reveal");
+
+function reveal(){
+
+reveals.forEach(el=>{
+let top=el.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+el.classList.add("active");
+}
+
+});
+
+}
+
+window.addEventListener("scroll",reveal);
+reveal();
+
+const slides=document.getElementById("slides");
+const totalSlides=slides.children.length;
+
+let index=0;
+
+function updateSlider(){
+slides.style.transform=`translateX(-${index*100}%)`;
+}
+
+document.getElementById("next").onclick=()=>{
+index=(index+1)%totalSlides;
+updateSlider();
+}
+
+document.getElementById("prev").onclick=()=>{
+index=(index-1+totalSlides)%totalSlides;
+updateSlider();
+}
+
+setInterval(()=>{
+index=(index+1)%totalSlides;
+updateSlider();
+},4000);
+
+</script>
+
+<script type="application/ld+json">
+
+{
+"@context":"https://schema.org",
+"@type":"AutoRepair",
+"name":"Afinamex Taller Mecánico",
+"telephone":"+52 7121402196",
+"address":{
+"@type":"PostalAddress",
+"streetAddress":"Av. Isidro Fabela 1946",
+"addressLocality":"Toluca",
+"addressRegion":"Estado de México",
+"addressCountry":"MX"
+}
+}
+
+</script>
 
 </body>
 </html>
