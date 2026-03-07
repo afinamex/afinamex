@@ -14,9 +14,15 @@
 
 <meta name="author" content="Afinamex">
 
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="MX-MEX">
+<meta name="geo.placename" content="Toluca">
+
 <meta property="og:title" content="AFINAMEX Taller Mecánico">
 <meta property="og:description" content="Mantenimiento automotriz profesional en Toluca">
 <meta property="og:image" content="logo.jpg">
+
+<link rel="icon" href="logo.jpg">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -66,15 +72,13 @@ animation:pulse 2s infinite;
 
 <div class="flex justify-end text-xs px-10 py-2 bg-black/70">
 
-📞 (712) 140 2196 | contacto@afinamex.com
+<a href="tel:+527121402196">📞 (712) 140 2196</a> | contacto@afinamex.com
 
 </div>
 
 <nav class="flex items-center px-10 py-4 bg-black/40 backdrop-blur">
 
-<img src="logo.jpg" class="h-10">
-
-<!-- BOTON MENU MOVIL -->
+<img src="logo.jpg" class="h-10" loading="lazy">
 
 <button id="menuBtn" class="ml-auto md:hidden text-2xl">
 <i class="fa-solid fa-bars"></i>
@@ -121,7 +125,7 @@ Mantenimiento automotriz profesional en Toluca
 
 <div class="flex gap-4">
 
-<a href="https://wa.me/527121402196"
+<a href="https://wa.me/527121402196?text=Hola%20quiero%20cotizar%20un%20servicio"
 class="bg-yellow-400 text-black px-6 py-3 rounded font-bold">
 
 <i class="fa-brands fa-whatsapp"></i>
@@ -198,12 +202,12 @@ GALERÍA DEL TALLER
 
 <div id="slides" class="flex transition-transform duration-500">
 
-<img src="galeria1.jpg" class="w-full flex-shrink-0">
-<img src="galeria2.jpg" class="w-full flex-shrink-0">
-<img src="galeria3.jpg" class="w-full flex-shrink-0">
-<img src="galeria4.jpg" class="w-full flex-shrink-0">
-<img src="galeria5.jpg" class="w-full flex-shrink-0">
-<img src="galeria6.jpg" class="w-full flex-shrink-0">
+<img src="galeria1.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
+<img src="galeria2.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
+<img src="galeria3.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
+<img src="galeria4.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
+<img src="galeria5.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
+<img src="galeria6.jpg" loading="lazy" class="w-full flex-shrink-0 object-cover">
 
 </div>
 
@@ -248,7 +252,7 @@ Más información
 
 </div>
 
-<img src="flotillas.jpg" class="md:w-1/2 rounded shadow">
+<img src="flotillas.jpg" loading="lazy" class="md:w-1/2 rounded shadow">
 
 </section>
 
@@ -277,7 +281,7 @@ Calixtlahuaca, Estado de México
 (712) 140 2196
 </p>
 
-<a href="https://wa.me/527121402196"
+<a href="https://wa.me/527121402196?text=Hola%20quiero%20información"
 class="bg-green-500 text-white px-6 py-2 rounded">
 
 WhatsApp
@@ -287,6 +291,7 @@ WhatsApp
 </div>
 
 <iframe
+loading="lazy"
 src="https://maps.google.com/maps?q=Av%20Isidro%20Fabela%201946%20Toluca&t=&z=13&ie=UTF8&iwloc=&output=embed"
 class="w-full h-72 rounded shadow">
 </iframe>
@@ -299,7 +304,7 @@ class="w-full h-72 rounded shadow">
 
 <footer class="bg-black text-white py-10 text-center">
 
-<img src="logo.jpg" class="h-12 mx-auto mb-4">
+<img src="logo.jpg" loading="lazy" class="h-12 mx-auto mb-4">
 
 <p>
 AFINAMEX Taller Mecánico
@@ -317,7 +322,7 @@ Tel: (712) 140 2196
 
 <!-- BOTON WHATSAPP -->
 
-<a href="https://wa.me/527121402196"
+<a href="https://wa.me/527121402196?text=Hola%20quiero%20cotizar%20un%20servicio"
 class="whatsapp fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg text-xl">
 
 <i class="fa-brands fa-whatsapp"></i>
@@ -358,6 +363,7 @@ el.classList.add("active");
 }
 
 window.addEventListener("scroll",reveal);
+reveal();
 
 const slides=document.getElementById("slides");
 const totalSlides=slides.children.length;
@@ -405,4 +411,3 @@ updateSlider();
 
 </body>
 </html>
-```
