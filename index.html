@@ -54,15 +54,6 @@ animation:pulse 2s infinite;
 100%{transform:scale(1)}
 }
 
-/* EFECTO PARA DESVANECER EL LOGO EN FONDO NEGRO */
-
-.logo-fade{
-background:black;
-padding:6px 10px;
-border-radius:6px;
-mix-blend-mode:lighten;
-}
-
 </style>
 
 </head>
@@ -81,7 +72,9 @@ mix-blend-mode:lighten;
 
 <nav class="flex items-center px-10 py-4 bg-black/40 backdrop-blur">
 
-<img src="logo.jpg" class="h-10 logo-fade">
+<img src="logo.jpg" class="h-10">
+
+<!-- BOTON MENU MOVIL -->
 
 <button id="menuBtn" class="ml-auto md:hidden text-2xl">
 <i class="fa-solid fa-bars"></i>
@@ -306,7 +299,7 @@ class="w-full h-72 rounded shadow">
 
 <footer class="bg-black text-white py-10 text-center">
 
-<img src="logo.jpg" class="h-12 mx-auto mb-4 logo-fade">
+<img src="logo.jpg" class="h-12 mx-auto mb-4">
 
 <p>
 AFINAMEX Taller Mecánico
@@ -322,12 +315,93 @@ Tel: (712) 140 2196
 
 </footer>
 
+<!-- BOTON WHATSAPP -->
+
 <a href="https://wa.me/527121402196"
 class="whatsapp fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg text-xl">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 </a>
+
+<script>
+
+document.getElementById("menuBtn").onclick=function(){
+document.getElementById("menu").classList.toggle("hidden");
+}
+
+window.addEventListener("scroll",function(){
+
+let nav=document.getElementById("navbar");
+
+if(window.scrollY>50){
+nav.classList.add("bg-black");
+}else{
+nav.classList.remove("bg-black");
+}
+
+});
+
+const reveals=document.querySelectorAll(".reveal");
+
+function reveal(){
+
+reveals.forEach(el=>{
+let top=el.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+el.classList.add("active");
+}
+
+});
+
+}
+
+window.addEventListener("scroll",reveal);
+
+const slides=document.getElementById("slides");
+const totalSlides=slides.children.length;
+
+let index=0;
+
+function updateSlider(){
+slides.style.transform=`translateX(-${index*100}%)`;
+}
+
+document.getElementById("next").onclick=()=>{
+index=(index+1)%totalSlides;
+updateSlider();
+}
+
+document.getElementById("prev").onclick=()=>{
+index=(index-1+totalSlides)%totalSlides;
+updateSlider();
+}
+
+setInterval(()=>{
+index=(index+1)%totalSlides;
+updateSlider();
+},4000);
+
+</script>
+
+<script type="application/ld+json">
+
+{
+"@context":"https://schema.org",
+"@type":"AutoRepair",
+"name":"Afinamex Taller Mecánico",
+"telephone":"+52 7121402196",
+"address":{
+"@type":"PostalAddress",
+"streetAddress":"Av. Isidro Fabela 1946",
+"addressLocality":"Toluca",
+"addressRegion":"Estado de México",
+"addressCountry":"MX"
+}
+}
+
+</script>
 
 </body>
 </html>
