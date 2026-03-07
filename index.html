@@ -55,6 +55,15 @@ animation:pulse 2s infinite;
 100%{transform:scale(1)}
 }
 
+/* EFECTO PARA DESVANECER LOGO EN FONDO NEGRO */
+
+.logo-fade{
+background:black;
+padding:4px 8px;
+border-radius:6px;
+mix-blend-mode:lighten;
+}
+
 </style>
 
 </head>
@@ -73,9 +82,7 @@ animation:pulse 2s infinite;
 
 <nav class="flex items-center px-10 py-4 bg-black/40 backdrop-blur">
 
-<img src="logo.jpg" class="h-10">
-
-<!-- BOTON MENU MOVIL -->
+<img src="logo.jpg" class="h-10 logo-fade">
 
 <button id="menuBtn" class="ml-auto md:hidden text-2xl">
 <i class="fa-solid fa-bars"></i>
@@ -187,7 +194,7 @@ NUESTROS <span class="text-red-600">SERVICIOS</span>
 
 </section>
 
-<!-- GALERIA SLIDER -->
+<!-- GALERIA -->
 
 <section id="galeria" class="py-20 bg-gray-200 px-10 reveal">
 
@@ -300,7 +307,7 @@ class="w-full h-72 rounded shadow">
 
 <footer class="bg-black text-white py-10 text-center">
 
-<img src="logo.jpg" class="h-12 mx-auto mb-4">
+<img src="logo.jpg" class="h-12 mx-auto mb-4 logo-fade">
 
 <p>
 AFINAMEX Taller Mecánico
@@ -315,8 +322,6 @@ Tel: (712) 140 2196
 </p>
 
 </footer>
-
-<!-- BOTON WHATSAPP -->
 
 <a href="https://wa.me/527121402196"
 class="whatsapp fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg text-xl">
@@ -369,41 +374,5 @@ function updateSlider(){
 slides.style.transform=`translateX(-${index*100}%)`;
 }
 
-document.getElementById("next").onclick=()=>{
-index=(index+1)%totalSlides;
-updateSlider();
-}
-
-document.getElementById("prev").onclick=()=>{
-index=(index-1+totalSlides)%totalSlides;
-updateSlider();
-}
-
-setInterval(()=>{
-index=(index+1)%totalSlides;
-updateSlider();
-},4000);
-
-</script>
-
-<script type="application/ld+json">
-
-{
-"@context":"https://schema.org",
-"@type":"AutoRepair",
-"name":"Afinamex Taller Mecánico",
-"telephone":"+52 7121402196",
-"address":{
-"@type":"PostalAddress",
-"streetAddress":"Av. Isidro Fabela 1946",
-"addressLocality":"Toluca",
-"addressRegion":"Estado de México",
-"addressCountry":"MX"
-}
-}
-
-</script>
-
-</body>
-</html>
+document
 ```
