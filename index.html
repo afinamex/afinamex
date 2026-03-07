@@ -3,181 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFINAMEX | Copia Fiel</title>
+    <title>AFINAMEX | Taller Mecánico</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="Taller mecánico AFINAMEX en Toluca y Atlacomulco. Especialistas en afinaciones, suspensión y administración de flotillas.">
+
     <script src="https://tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
-        /* La clave es esta fuente condensada y pesada */
-        @import url('https://googleapis.com');
-        .font-impact { font-family: 'Archivo Black', sans-serif; text-transform: uppercase; }
-        .font-mecanica { font-family: 'Roboto', sans-serif; font-style: italic; font-weight: 900; text-transform: uppercase; }
-        
-        .bg-rojo { background-color: #cc0000; }
-        .bg-amarillo { background-color: #ffcc00; }
+        /* Estilos específicos del boceto */
+        .fuente-titulo { font-family: Arial, sans-serif; font-weight: 900; text-transform: uppercase; }
         .text-rojo { color: #cc0000; }
-        .text-amarillo { color: #ffcc00; }
-        
-        /* Efecto de puntos amarillos en los iconos */
-        .icon-dot { position: relative; }
-        .icon-dot::after { content: ''; position: absolute; left: -8px; top: 50%; width: 6px; height: 6px; background: #ffcc00; border-radius: 50%; }
+        .bg-amarillo { background-color: #ffcc00; }
+        .bg-rojo { background-color: #cc0000; }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-white font-sans text-black">
 
-    <!-- 1. HEADER NEGRO (Exacto) -->
-    <header class="bg-black text-white py-2 px-4 border-b border-zinc-800">
-        <div class="container mx-auto flex justify-between items-center text-[10px] md:text-xs">
-            <div class="flex items-center gap-6">
-                <img src="logo.jpg" class="h-10">
-                <div class="hidden md:flex gap-4">
-                    <span><i class="fas fa-phone text-amarillo"></i> (712) 140 2196</span>
-                    <span><i class="fas fa-envelope text-amarillo"></i> contacto@afinamex.com</span>
-                </div>
-            </div>
-            <nav class="flex items-center gap-4 uppercase font-bold">
-                <a href="#" class="hover:text-amarillo">Inicio</a>
-                <a href="#" class="hover:text-amarillo">Servicios</a>
-                <a href="#" class="hover:text-amarillo">Ubicación</a>
-                <a href="#" class="hover:text-amarillo">Nosotros</a>
-                <div class="bg-amarillo text-black px-2 py-1 rounded font-black flex items-center gap-1">
-                    <i class="fas fa-calendar-alt"></i> AGENDAR SERVICIO
-                </div>
-            </nav>
+    <!-- 1. BARRA DE CONTACTO (SUPERIOR DERECHA) -->
+    <div class="py-1 px-10 flex justify-end text-[10px] md:text-xs border-b border-gray-100">
+        <span>(712) 140 2196 | contacto@afinamex.com</span>
+    </div>
+
+    <!-- 2. MENÚ AMARILLO -->
+    <nav class="bg-amarillo py-2 px-10 flex items-center gap-4 text-[10px] md:text-xs font-bold">
+        <div class="bg-rojo rounded-full w-6 h-6"></div> <!-- Logo placeholder -->
+        <div class="flex gap-4">
+            <a href="#" class="hover:underline">Inicio</a>
+            <a href="#servicios" class="hover:underline">Servicios</a>
+            <a href="#ubicacion" class="hover:underline">Ubicación</a>
+            <a href="#" class="hover:underline">Nosotros</a>
         </div>
-    </header>
+        <button class="ml-auto bg-white/20 px-2 py-1 rounded">Agendar servicio</button>
+    </nav>
 
-    <!-- 2. PORTADA (Fondo + Textos) -->
-    <section class="relative h-[550px] bg-black">
-        <img src="taller-fondo.jpg" class="absolute inset-0 w-full h-full object-cover opacity-70">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
-        <div class="container mx-auto relative z-10 h-full flex flex-col justify-center px-10">
-            <h2 class="text-white text-5xl font-impact tracking-tighter mb-1">
-                TALLER <span class="bg-amarillo text-black px-2 ml-2">MECÁNICO</span>
-            </h2>
-            <h1 class="text-rojo text-8xl font-impact leading-none mb-6">AFINAMEX</h1>
-            <p class="text-white text-2xl font-bold mb-6 max-w-md">Mantenimiento automotriz profesional</p>
-            <ul class="text-white space-y-2 mb-10 text-xl font-bold italic">
-                <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-rojo"></i> Afinaciones</li>
-                <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-rojo"></i> Ajustes</li>
-                <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-rojo"></i> Suspensión</li>
+    <!-- 3. IMAGEN PRINCIPAL DEL TALLER -->
+    <section class="w-full">
+        <img src="taller-fondo.jpg" alt="Taller Afinamex" class="w-full h-auto max-h-[400px] object-cover">
+    </section>
+
+    <!-- 4. SECCIÓN TEXTO PRINCIPAL -->
+    <section class="py-10 px-10">
+        <h2 class="text-2xl fuente-titulo italic">TALLER MECANICO</h2>
+        <h1 class="text-5xl fuente-titulo text-rojo italic mb-4">AFINAMEX</h1>
+        <p class="font-bold mb-4 italic">Mantenimiento automotriz profesional</p>
+        <ul class="list-disc ml-5 mb-6 text-sm font-medium">
+            <li>Afinaciones</li>
+            <li>Ajustes</li>
+            <li>Suspensión</li>
+        </ul>
+        <div class="flex gap-2">
+            <button class="bg-amarillo px-4 py-1 text-[10px] font-bold rounded border border-black/10">Cotizar por WhatsApp</button>
+            <button class="bg-rojo text-white px-4 py-1 text-[10px] font-bold rounded">Agendar servicio</button>
+        </div>
+    </section>
+
+    <!-- 5. NUESTROS SERVICIOS (LISTADO VERTICAL) -->
+    <section id="servicios" class="py-10 px-10 border-t">
+        <h2 class="text-2xl fuente-titulo mb-6">NUESTROS SERVICIOS</h2>
+        
+        <div class="space-y-6">
+            <div>
+                <h3 class="font-black text-sm italic uppercase">Afinación automotriz</h3>
+                <p class="text-[11px] text-gray-600 italic">Bujías, filtros y revisión general.</p>
+            </div>
+            <div>
+                <h3 class="font-black text-sm italic uppercase">Cambio de aceite</h3>
+                <p class="text-[11px] text-gray-600 italic">Aceite sintético y semisintético.</p>
+            </div>
+            <div>
+                <h3 class="font-black text-sm italic uppercase">Ajustes mecánicos</h3>
+                <p class="text-[11px] text-gray-600 italic">Diagnóstico y reparación.</p>
+            </div>
+            <div>
+                <h3 class="font-black text-sm italic uppercase">Suspensión</h3>
+                <p class="text-[11px] text-gray-600 italic">Amortiguadores y terminales.</p>
+            </div>
+            <div>
+                <h3 class="font-black text-sm italic uppercase">Hojalatería y pintura</h3>
+                <p class="text-[11px] text-gray-600 italic">Enderezado y pintura.</p>
+            </div>
+            <div>
+                <h3 class="font-black text-sm italic uppercase">Llantas</h3>
+                <p class="text-[11px] text-gray-600 italic">Venta e instalación.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ADMINISTRACIÓN DE FLOTILLAS (BLOQUE AMARILLO) -->
+    <section class="bg-amarillo py-12 px-10 flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/2">
+            <h2 class="text-3xl fuente-titulo leading-none mb-4">ADMINISTRACIÓN DE FLOTILLAS</h2>
+            <p class="font-bold mb-4 italic text-sm">Mantenimiento de flotas empresariales</p>
+            <ul class="list-disc ml-5 mb-8 text-[11px] font-bold space-y-1">
+                <li>Control y mantenimiento preventivo de flotillas.</li>
+                <li>Servicios personalizados a empresas.</li>
             </ul>
-            <div class="flex gap-4">
-                <button class="bg-amarillo text-black px-6 py-3 rounded font-black uppercase text-sm shadow-xl flex items-center gap-2">
-                    <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
-                </button>
-                <button class="bg-rojo text-white px-6 py-3 rounded font-black uppercase text-sm shadow-xl flex items-center gap-2">
-                    <i class="fas fa-calendar-alt"></i> Agendar servicio
-                </button>
-            </div>
+            <button class="bg-rojo text-white px-4 py-1 text-[10px] font-bold rounded">MÁS INFORMACIÓN</button>
+        </div>
+        <div class="md:w-1/2">
+            <img src="flotillas.jpg" alt="Flotillas Afinamex" class="w-full shadow-lg">
         </div>
     </section>
 
-    <!-- 3. NUESTROS SERVICIOS (Layout exacto 2x3) -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-center text-4xl font-impact mb-16 text-zinc-800 tracking-tight">NUESTROS SERVICIOS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <!-- Afinación -->
-                <div class="bg-gray-50 p-8 shadow-md border-t-2 border-gray-100 flex items-center gap-6">
-                    <div class="icon-dot"><i class="fas fa-tools text-5xl text-black"></i></div>
-                    <div>
-                        <h3 class="font-black uppercase text-sm mb-1 leading-tight">Afinación automotriz</h3>
-                        <p class="text-[10px] text-gray-500 italic leading-tight">Cambio de bujías, filtros y revisión general.</p>
-                    </div>
-                </div>
-                <!-- Aceite -->
-                <div class="bg-gray-50 p-8 shadow-md border-t-2 border-gray-100 flex items-center gap-6">
-                    <div class="icon-dot"><i class="fas fa-oil-can text-5xl text-black"></i></div>
-                    <div>
-                        <h3 class="font-black uppercase text-sm mb-1 leading-tight">Cambio de aceite</h3>
-                        <p class="text-[10px] text-gray-500 italic leading-tight">Aceite sintético y semisintético.</p>
-                    </div>
-                </div>
-                <!-- Ajustes -->
-                <div class="bg-gray-50 p-8 shadow-md border-t-2 border-gray-100 flex items-center gap-6">
-                    <div class="icon-dot"><i class="fas fa-cog text-5xl text-black"></i></div>
-                    <div>
-                        <h3 class="font-black uppercase text-sm mb-1 leading-tight">Ajustes mecánicos</h3>
-                        <p class="text-[10px] text-gray-500 italic leading-tight">Diagnóstico y reparación.</p>
-                    </div>
-                </div>
-                <!-- Suspensión -->
-                <div class="bg-gray-50 p-8 shadow-md border-t-2 border-gray-100 flex items-center gap-6">
-                    <div class="icon-dot"><i class="fas fa-car-side text-5xl text-black"></i></div>
-                    <div>
-                        <h3 class="font-black uppercase text-sm mb-1 leading-tight">Suspensión</h3>
-                        <p class="text-[10px] text-gray-500 italic leading-tight">Amortiguadores, rótulas, terminales.</p>
-                    </div>
-                </div>
-                <!-- Hojalatería -->
-                <div class="bg-gray-50 p-8 shadow-md border-t-2 border-gray-100 flex items-center gap-6">
-                    <div class="icon-dot"><i class="fas fa-paint-roller text-5xl text-black"></i></div>
-                    <div>
-                        <h3 class="font-black uppercase text-sm mb-1 leading-tight">Hojalatería y pintura</h3>
-                        <p class="text-[10px] text-gray-500 italic leading-tight">Enderezado y pintura de carrocería.</p>
-                    </div>
-                </div>
-                <!-- Llantas -->
-                <div class="bg-gray-50 p-8 shadow-md border-t-2 border-gray-100 flex items-center gap-6">
-                    <div class="icon-dot"><i class="fas fa-circle-notch text-5xl text-black"></i></div>
-                    <div>
-                        <h3 class="font-black uppercase text-sm mb-1 leading-tight">Llantas</h3>
-                        <p class="text-[10px] text-gray-500 italic leading-tight">Venta, instalación y balanceo.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- 7. MARCAS -->
+    <section class="py-10 px-10">
+        <h2 class="text-xl fuente-titulo italic">MARCAS QUE ATENDEMOS</h2>
     </section>
 
-    <!-- 4. FLOTILLAS (Fondo Amarillo) -->
-    <section class="bg-amarillo py-16 px-6">
-        <div class="container mx-auto flex flex-col md:flex-row items-center gap-12 max-w-6xl">
-            <div class="md:w-1/2">
-                <h2 class="text-4xl font-impact mb-4 leading-none">ADMINISTRACIÓN DE FLOTILLAS</h2>
-                <p class="font-bold text-xl mb-6 italic">Mantenimiento de flotas empresariales</p>
-                <ul class="space-y-4 mb-10 text-xs font-black">
-                    <li class="flex items-start gap-2"><i class="fas fa-square text-[8px] text-rojo mt-1"></i> Control, administración y mantenimiento preventivo de flotillas.</li>
-                    <li class="flex items-start gap-2"><i class="fas fa-square text-[8px] text-rojo mt-1"></i> Servicios personalizados a empresas y negocios.</li>
-                </ul>
-                <button class="bg-rojo text-white px-8 py-3 rounded font-black text-xs uppercase shadow-xl">» MÁS INFORMACIÓN</button>
-            </div>
-            <div class="md:w-1/2">
-                <img src="flotillas.jpg" class="rounded shadow-2xl border-4 border-white">
-            </div>
+    <!-- 8. UBICACIÓN -->
+    <section id="ubicacion" class="py-10 px-10 bg-gray-50 border-t">
+        <h2 class="text-3xl fuente-titulo text-rojo italic mb-6">UBICACIÓN</h2>
+        
+        <div class="mb-6">
+            <h4 class="font-black text-sm">Afinamex Toluca</h4>
+            <p class="text-[11px] text-gray-600">Av. Isidro Fabela 1946, Calixtlahuaca, Estado de México</p>
+            <p class="text-[11px] font-bold mt-1">(712) 140 2196</p>
+            <button class="mt-4 border border-green-500 text-green-600 px-4 py-1 text-[10px] font-bold rounded flex items-center gap-2">
+                Cotizar por WhatsApp
+            </button>
         </div>
-    </section>
 
-    <!-- 5. MARCAS (Banner Negro) -->
-    <section class="bg-black py-12">
-        <h3 class="text-white text-center font-impact text-sm mb-10 opacity-70 tracking-widest">MARCAS QUE ATENDEMOS</h3>
-        <div class="container mx-auto flex flex-wrap justify-center gap-16 text-white/50 text-6xl">
-            <i class="fab fa-nissan"></i>
-            <i class="fab fa-volkswagen"></i>
-            <i class="fab fa-honda"></i>
-            <img src="bmw-logo-white.png" class="h-16 opacity-50 grayscale">
-        </div>
-    </section>
-
-    <!-- 6. UBICACIÓN (Layout exacto) -->
-    <section class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <h2 class="text-center text-4xl font-impact text-rojo mb-12">UBICACIÓN</h2>
-            <div class="flex flex-col md:flex-row shadow-2xl rounded-sm overflow-hidden bg-white">
-                <div class="md:w-1/3 p-10 flex flex-col justify-center">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-map-marker-alt text-amarillo text-2xl"></i>
-                        <h4 class="font-black text-xl uppercase">Afinamex Toluca</h4>
-                    </div>
-                    <p class="text-gray-500 text-sm mb-8 ml-8 italic">Av. Isidro Fabela 1946, Calixtlahuaca, Estado de México</p>
-                    <p class="font-black text-xl mb-8 ml-8 leading-none"><i class="fas fa-phone text-amarillo mr-2"></i> (712) 140 2196</p>
-                    <button class="bg-green-500 text-white font-black py-3 px-6 rounded-md flex items-center justify-center gap-2 text-sm shadow-inner ml-8">
-                        <i class="fab fa-whatsapp text-2xl"></i> COTIZAR POR WHATSAPP
-                    </button>
-                </div>
-                <div class="md:w-2/3">
-                    <img src="mapa-estatico.jpg" class="w-full h-full object-cover">
-                </div>
-            </div>
+        <!-- IMAGEN DEL MAPA -->
+        <div class="w-full h-48 md:h-64 bg-gray-200">
+            <img src="mapa-estatico.jpg" alt="Ubicación Afinamex" class="w-full h-full object-cover">
         </div>
     </section>
 
