@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFINAMEX | Taller Mecánico</title>
+    <title>AFINAMEX Taller Mecánico en Toluca | Afinaciones y Flotillas</title>
     
     <!-- SEO -->
-    <meta name="description" content="Taller mecánico AFINAMEX en Toluca y Atlacomulco. Especialistas en afinaciones, suspensión y administración de flotillas.">
+    <meta name="description" content="AFINAMEX es un taller mecánico en Toluca y Atlacomulco. Expertos en afinaciones, suspensión, diagnóstico y administración de flotillas empresariales.">
+    <meta name="keywords" content="taller mecánico Toluca, afinaciones, suspensión, diagnóstico automotriz, flotillas, Atlacomulco, mantenimiento de autos">
 
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,40 +17,57 @@
         .bg-amarillo { background-color: #ffcc00; }
         .bg-rojo { background-color: #cc0000; }
     </style>
+
+    <!-- Datos estructurados Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "AFINAMEX Taller Mecánico",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Isidro Fabela 1946, Calixtlahuaca",
+        "addressLocality": "Toluca",
+        "addressRegion": "Estado de México",
+        "postalCode": "50000",
+        "addressCountry": "MX"
+      },
+      "telephone": "+52 712 440 2196",
+      "email": "contacto@afinamex.com",
+      "openingHours": "Mo-Sa 09:00-18:00",
+      "image": "taller-exterior.jpg",
+      "url": "https://afinamex.com"
+    }
+    </script>
 </head>
 <body class="bg-white font-sans text-black">
 
-    <!-- 1. BARRA DE CONTACTO -->
+    <!-- BARRA DE CONTACTO -->
     <div class="py-1 px-10 flex justify-end text-[10px] md:text-xs border-b border-gray-100">
         <span>(712) 440 2196 | contacto@afinamex.com</span>
     </div>
 
-    <!-- 2. MENÚ AMARILLO -->
+    <!-- MENÚ -->
     <nav class="bg-amarillo py-2 px-10 flex items-center gap-4 text-[10px] md:text-xs font-bold">
         <div class="bg-rojo rounded-full w-6 h-6"></div>
         <div class="flex gap-4">
             <a href="#" class="hover:underline">Inicio</a>
             <a href="#servicios" class="hover:underline">Servicios</a>
             <a href="#ubicacion" class="hover:underline">Ubicación</a>
-            <a href="#" class="hover:underline">Nosotros</a>
+            <a href="#nosotros" class="hover:underline">Nosotros</a>
         </div>
         <button class="ml-auto bg-white/20 px-2 py-1 rounded">Agendar servicio</button>
     </nav>
 
-    <!-- 3. IMAGEN PRINCIPAL -->
-    <section class="w-full">
-        <img src="taller-fondo.jpg" alt="Foto del taller Afinamex en Toluca" class="w-full h-auto max-h-[400px] object-cover">
-    </section>
-
-    <!-- 4. SECCIÓN PRINCIPAL -->
+    <!-- SECCIÓN PRINCIPAL -->
     <section class="py-10 px-10">
         <h2 class="text-2xl fuente-titulo italic">TALLER MECANICO</h2>
         <h1 class="text-5xl fuente-titulo text-rojo italic mb-4">AFINAMEX</h1>
         <p class="font-bold mb-4 italic">Mantenimiento automotriz profesional</p>
         <ul class="list-disc ml-5 mb-6 text-sm font-medium">
-            <li>Afinaciones</li>
-            <li>Ajustes</li>
+            <li>Afinación</li>
             <li>Suspensión</li>
+            <li>Diagnóstico</li>
         </ul>
         <div class="flex gap-2">
             <a href="https://wa.me/5217124402196" class="bg-amarillo px-4 py-1 text-[10px] font-bold rounded border border-black/10">Cotizar por WhatsApp</a>
@@ -57,69 +75,39 @@
         </div>
     </section>
 
-    <!-- 5. NUESTROS SERVICIOS -->
+    <!-- NUESTROS SERVICIOS -->
     <section id="servicios" class="py-10 px-10 border-t">
         <h2 class="text-2xl fuente-titulo mb-6">NUESTROS SERVICIOS</h2>
-        
         <div class="space-y-6">
-            <div>
-                <h3 class="font-black text-sm italic uppercase">Afinación automotriz</h3>
-                <p class="text-[11px] text-gray-600 italic">Cambio de bujías, filtros y revisión general.</p>
-            </div>
-            <div>
-                <h3 class="font-black text-sm italic uppercase">Cambio de aceite</h3>
-                <p class="text-[11px] text-gray-600 italic">Aceite sintético y semisintético.</p>
-            </div>
-            <div>
-                <h3 class="font-black text-sm italic uppercase">Ajustes mecánicos</h3>
-                <p class="text-[11px] text-gray-600 italic">Diagnóstico y reparación.</p>
-            </div>
-            <div>
-                <h3 class="font-black text-sm italic uppercase">Suspensión</h3>
-                <p class="text-[11px] text-gray-600 italic">Amortiguadores, rótulas y terminales.</p>
-            </div>
-            <div>
-                <h3 class="font-black text-sm italic uppercase">Hojalatería y pintura</h3>
-                <p class="text-[11px] text-gray-600 italic">Enderezado y pintura de carrocería.</p>
-            </div>
-            <div>
-                <h3 class="font-black text-sm italic uppercase">Llantas</h3>
-                <p class="text-[11px] text-gray-600 italic">Venta, instalación y balanceo de llantas.</p>
-            </div>
+            <div><h3 class="font-black text-sm italic uppercase">Afinación automotriz</h3><p class="text-[11px] text-gray-600 italic">Cambio de bujías, filtros y revisión general.</p></div>
+            <div><h3 class="font-black text-sm italic uppercase">Cambio de aceite</h3><p class="text-[11px] text-gray-600 italic">Aceite sintético y semisintético.</p></div>
+            <div><h3 class="font-black text-sm italic uppercase">Ajuste mecánico</h3><p class="text-[11px] text-gray-600 italic">Diagnóstico y reparación.</p></div>
+            <div><h3 class="font-black text-sm italic uppercase">Suspensión</h3><p class="text-[11px] text-gray-600 italic">Amortiguadores, rótulas y terminales.</p></div>
+            <div><h3 class="font-black text-sm italic uppercase">Hojalatería y pintura</h3><p class="text-[11px] text-gray-600 italic">Enderezado y pintura de carrocería.</p></div>
+            <div><h3 class="font-black text-sm italic uppercase">Llantas</h3><p class="text-[11px] text-gray-600 italic">Venta, instalación y balanceo de llantas.</p></div>
         </div>
     </section>
 
-    <!-- 6. ADMINISTRACIÓN DE FLOTILLAS -->
+    <!-- ADMINISTRACIÓN DE FLOTILLAS -->
     <section class="bg-amarillo py-12 px-10 flex flex-col md:flex-row items-center gap-10">
         <div class="md:w-1/2">
             <h2 class="text-3xl fuente-titulo leading-none mb-4">ADMINISTRACIÓN DE FLOTILLAS</h2>
             <p class="font-bold mb-4 italic text-sm">Mantenimiento de flotas empresariales</p>
             <ul class="list-disc ml-5 mb-8 text-[11px] font-bold space-y-1">
-                <li>Control, administración y mantenimiento preventivo de flotillas.</li>
-                <li>Servicios personalizados a empresas y negocios.</li>
+                <li>Mantenimiento de flotas especializadas.</li>
+                <li>Atención personalizada en la administración de flotillas.</li>
+                <li>Servicios especializados en limpieza y seguridad.</li>
             </ul>
-            <button class="bg-rojo text-white px-4 py-1 text-[10px] font-bold rounded">MÁS INFORMACIÓN</button>
+            <button class="bg-rojo text-white px-4 py-1 text-[10px] font-bold rounded">Solicitar cotización</button>
         </div>
         <div class="md:w-1/2">
-            <img src="flotillas.jpg" alt="Flotillas Afinamex" class="w-full shadow-lg">
+            <img src="taller-exterior.jpg" alt="Exterior del taller Afinamex con flotillas de servicio" class="w-full shadow-lg">
         </div>
     </section>
 
-    <!-- 7. MARCAS -->
-    <section class="py-10 px-10">
-        <h2 class="text-xl fuente-titulo italic mb-4">MARCAS QUE ATENDEMOS</h2>
-        <ul class="flex gap-6 text-sm font-bold">
-            <li>Nissan</li>
-            <li>Volkswagen</li>
-            <li>Honda</li>
-            <li>BMW</li>
-        </ul>
-    </section>
-
-    <!-- 8. UBICACIÓN -->
+    <!-- UBICACIÓN -->
     <section id="ubicacion" class="py-10 px-10 bg-gray-50 border-t">
         <h2 class="text-3xl fuente-titulo text-rojo italic mb-6">UBICACIÓN</h2>
-        
         <div class="mb-6">
             <h4 class="font-black text-sm">Afinamex Toluca</h4>
             <p class="text-[11px] text-gray-600">Av. Isidro Fabela 1946, Calixtlahuaca, Estado de México</p>
@@ -128,13 +116,19 @@
                 Cotizar por WhatsApp
             </a>
         </div>
-
-        <!-- MAPA INTERACTIVO -->
         <div class="w-full h-64">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.123456789!2d-99.657!3d19.289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd89abcdef%3A0x123456789abcdef!2sAfinamex%20Toluca!5e0!3m2!1ses!2smx!4v1670000000000" 
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
-</body>
-</html>
+    <!-- FOOTER -->
+    <footer class="bg-rojo text-white py-8 px-10 mt-10">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div>
+                <h3 class="font-bold mb-2">Contacto</h3>
+                <p>Tel: (712) 440 2196</p>
+                <p>Email: contacto@afinamex.com</p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Horarios</h3>
+                <p>Lunes a Sábado: 
