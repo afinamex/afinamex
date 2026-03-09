@@ -134,6 +134,10 @@ class="hidden md:flex flex-col md:flex-row absolute md:static top-20 left-0 w-fu
 class="bg-yellow-400 text-black px-5 py-2 rounded font-bold mt-4 md:mt-0 block md:inline-block">
 Agendar servicio
 </a>
+  
+<a href="#" onclick="abrirLogin()" class="text-white flex items-center gap-2">
+<i class="fa-solid fa-user"></i> Iniciar sesión
+</a>
  
 </div>
  
@@ -565,6 +569,54 @@ class="fixed bottom-42 right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg
 
 </a>
 
+<!-- LOGIN ADMIN -->
+
+<div id="loginBox" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+background:#111; padding:30px; border-radius:10px; color:white; width:280px; z-index:9999; box-shadow:0 10px 30px rgba(0,0,0,.5);">
+
+<h3 class="text-center text-xl mb-4">Panel administrador</h3>
+
+<input type="text" id="usuario" placeholder="Usuario"
+style="width:100%; padding:8px; margin-bottom:10px; color:black;">
+
+<input type="password" id="password" placeholder="Contraseña"
+style="width:100%; padding:8px; margin-bottom:10px; color:black;">
+
+<button onclick="login()" style="width:100%; padding:10px; background:#e11d48; border:none; color:white; border-radius:5px;">
+Entrar
+</button>
+
+<p id="error" style="color:red; text-align:center; margin-top:8px;"></p>
+
+</div>
+<script>
+
+function abrirLogin(){
+document.getElementById("loginBox").style.display="block";
+}
+
+function login(){
+
+let usuario="admin";
+let password="Gogf8603";
+
+let u=document.getElementById("usuario").value;
+let p=document.getElementById("password").value;
+
+if(u===usuario && p===password){
+
+window.location.href="panel.html";
+
+}else{
+
+document.getElementById("error").innerText="Usuario o contraseña incorrectos";
+
+}
+
+}
+
+</script>
+  
 <script>
 
 document.getElementById("menuBtn").onclick=function(){
